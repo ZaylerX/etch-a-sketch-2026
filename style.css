@@ -13,12 +13,13 @@ body {
 #container {
     display: flex;
     flex-wrap: wrap;
-    width: 40%;
+    width: 45%;
     height: auto;
+    border: 2px solid black;
 }
 
 .square {
-    border: 1px solid black;
+    border: 1px black solid;
     width: 6.25%;
     aspect-ratio: 1;
 }
