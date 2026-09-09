@@ -21,11 +21,5 @@ body {
 
 .square {
     border: 1px black solid;
-    width: 6.25%;
     aspect-ratio: 1;
-}
-
-#button {
-    width: 20px;
-    height: auto;
 }
