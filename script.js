@@ -5,5 +5,13 @@ for (i = 0; i < 16; i++) {
         const square = document.createElement("div");
         square.classList.add("square");
         container.appendChild(square);
+
     }
 }
+
+const grid = document.querySelectorAll(".square")
+
+grid.forEach(element => 
+    element.addEventListener("mouseover", (event) => {
+        element.style.backgroundColor = "blue"
+    }))
