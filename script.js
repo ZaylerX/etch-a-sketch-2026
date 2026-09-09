@@ -22,9 +22,11 @@ createGrid(input);
 const restart = document.querySelector("#restart");
 
 restart.addEventListener("click", () => {
+    do {
     input = prompt("How many squares per side do you want? ")
+    } while (input > 100)
+    
     container.replaceChildren();
-
     createGrid(input);
 })
 
