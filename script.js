@@ -1,5 +1,12 @@
 const container = document.querySelector("#container");
 
+function getRandomColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+}
+
 function createGrid(size) {
     for (let i = 0; i < size; i++) {
             for (let j = 0; j < size; j++) {
@@ -8,7 +15,10 @@ function createGrid(size) {
             square.style.width = `${100 / size}%`;
 
             square.addEventListener("mouseover", () => {
-                square.style.backgroundColor = "blue"
+                square.style.backgroundColor = getRandomColor();
+                if (square.style.opacity < 1) {
+                square.style.opacity  = +square.style.opacity + 0.1
+            }
             })
             container.appendChild(square);
         }
@@ -29,4 +39,3 @@ restart.addEventListener("click", () => {
     container.replaceChildren();
     createGrid(input);
 })
-
